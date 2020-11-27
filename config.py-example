@@ -1,0 +1,19 @@
+# tlog - Moving time entries from toggl.com to jira
+# Written in 2020 by Grigory Solovyev gs1571@gmail.com
+#
+# To the extent possible under law, the author(s) have dedicated all copyright 
+# and related and neighboring rights to this software to the public domain worldwide. 
+# This software is distributed without any warranty.
+# You should have received a copy of the CC0 Public Domain Dedication along with this software. 
+# If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
+
+# Toggl API Token
+API_TOKEN             = 'xxx'
+# Jira username
+JIRA_USERNAME         = ''
+# Jira username, can be empty, in that case will
+JIRA_PASSWORD         = ''
+# Jira url
+JIRA_URL              = 'https://example.com/'
+# How long jump to the past
+DAYS_AGO              = 3
