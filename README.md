@@ -5,7 +5,7 @@ The idea of the script is to copy time entries from service toggl.com to Jira. T
 
 The script wrote on Python 3.
 
-You will need to install python libraries which are mentioned in [requirements.txt] to be able to use this.
+You will need to install python libraries which are mentioned in [requirements.txt](requirements.txt) to be able to use this.
 
 Installation on linux/mac
 -------------------------
