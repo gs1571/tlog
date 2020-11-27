@@ -11,7 +11,7 @@
 API_TOKEN             = 'xxx'
 # Jira username
 JIRA_USERNAME         = ''
-# Jira username, can be empty, in that case will
+# Jira username, can be empty, in that case you will be asked
 JIRA_PASSWORD         = ''
 # Jira url
 JIRA_URL              = 'https://example.com/'
