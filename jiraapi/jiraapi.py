@@ -31,6 +31,7 @@ class JiraAPI():
     if response.status_code == 200:
       return response.status_code
     else:
+      print('Error Message: {}'.format(response.content))
       raise NameError(f'Code of error {response.status_code} and text {response.text}.')
 
   def get_worklog_entries(self, task):
@@ -45,8 +46,10 @@ class JiraAPI():
     if response.status_code == 200:
       pass
     elif response.status_code == 404:
+      print('Error Message: {}'.format(response.content))
       raise NameError(f'Task {task} not found!')
     else:
+      print('Error Message: {}'.format(response.content))
       raise NameError(f'Code of error {response.status_code} and text {response.text}.')
     
     json = response.json()
@@ -101,12 +104,13 @@ class JiraAPI():
       auth=requests.auth.HTTPBasicAuth(self.username, self.password), 
       json=worklog.to_jira()
     )
-
     if response.status_code == 201:
       return True
     elif response.status_code == 400:
+      print('Error Message: {}'.format(response.content))
       raise NameError(f'The input is invalid (e.g. missing required fields, invalid values, and so forth). Worklog: {worklog}')
     elif response.status_code == 403:
+      print('Error Message: {}'.format(response.content))
       raise NameError(f'The calling user does not have permission to add the worklog. Worklog: {worklog}')
     else:
       raise NameError(f'Code of error {response.status_code} and text {response.text}. Worklog: {worklog}')
